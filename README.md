@@ -41,7 +41,7 @@ brew install sox lame jq
 
 ## Video Example
 
-![](example.mp4)
+![](https://raw.githubusercontent.com/realrasengan/blind.sh/main/example.mp4)
 
 ## License
 
