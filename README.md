@@ -44,6 +44,10 @@ brew install sox lame jq
 
 https://user-images.githubusercontent.com/466317/231329358-df73f2e2-cb35-4b56-8a96-523a0e027d8c.mp4
 
+## Note
+
+Don't forget to delete your OpenAI api key before uploading on github, not 
+like me ;) (it's since been deleted)
 
 ## License
 
