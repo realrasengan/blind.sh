@@ -33,11 +33,18 @@ BLIND_COMMAND=$(curl https://api.openai.com/v1/chat/completions \
   -d "$BLIND_MESSAGES")
 
 echo $BLIND_COMMAND
-
-BLIND_COMMAND="$(echo $BLIND_COMMAND | jq ".choices [0] .message .content" | sed 's/\\"/"/g' | sed 's/\\\\/\\/g' | sed 's/^.//;s/.$//')"
-
+BLIND_COMMAND=$(echo $BLIND_COMMAND | jq ".choices [0] .message .content" | sed 's/^.//;s/.$//')
 echo $BLIND_COMMAND
 
-echo $BLIND_COMMAND > $BLIND_FOLDER/run.sh && chmod u+x $BLIND_FOLDER/run.sh && $BLIND_FOLDER/run.sh
+PROCEED=$(osascript -e "set theResponse to button returned of (display dialog \"Run $BLIND_COMMAND?\" buttons {\"No\", \"Yes\"} default button \"No\" with icon caution)" -e 'if theResponse is "Yes" then' -e 'return true' -e 'else' -e 'return false' -e 'end if')
 
+BLIND_COMMAND=$(echo $BLIND_COMMAND  | sed 's/\\"/"/g' | sed 's/\\\\/\\/g')
+
+echo $PROCEED
+
+if [ "$PROCEED" = "true" ]
+  then
+    echo $BLIND_COMMAND > $BLIND_FOLDER/run.sh && chmod u+x $BLIND_FOLDER/run.sh && $BLIND_FOLDER/run.sh
+fi
+  
 
