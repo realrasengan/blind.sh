@@ -9,10 +9,10 @@ to help support accessibility for those with different vision.
 https://user-images.githubusercontent.com/466317/231329358-df73f2e2-cb35-4b56-8a96-523a0e027d8c.mp4
 
 
-## WARNING
+## Warning
 
-This could severely damage your computer and is more or less just a 'show and tell' of what is possible. That said, simple work on boundaries could make this safe and production ready 
-quite quickly.
+This could severely damage your computer and is more or less just a 'show and tell' of what is possible. That said, this prompts before running anything.  
+Additionally, simple work on boundaries could make this safe and production ready quite quickly.
 
 ## Instructions
 
