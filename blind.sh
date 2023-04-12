@@ -1,5 +1,5 @@
 #!/bin/bash
-OPENAI_API_KEY=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
+OPENAI_API_KEY="" # put key here
 
 BLIND_UUID=$(uuidgen)
 BLIND_FOLDER=/tmp/blind.sh/$BLIND_UUID
