@@ -1,6 +1,5 @@
 #!/bin/bash
 OPENAI_API_KEY="" # put key here
-
 BLIND_UUID=$(uuidgen)
 BLIND_FOLDER=/tmp/blind.sh/$BLIND_UUID
 mkdir -p $BLIND_FOLDER
@@ -23,7 +22,7 @@ BLIND_MESSAGES='{
 {"role": "assistant", "content": "osascript -e \"tell application \\\"Google Chrome\\\" to activate\" -e \"tell application \\\"Google Chrome\\\" to open location \\\"https://www.google.com\\\"\""},
 {"role": "user", "content": "What is the osascript command to open a terminal and run uptime.  Do not include any additional text other than the osascript command."},
 {"role": "assistant", "content": "osascript -e \"tell application \\\"Terminal\\\" to do script \\\"uptime\\\"\""},
-{"role": "user", "content": "What is the osascript command to '$BLIND_RESPONSE'"}]
+{"role": "user", "content": "'$BLIND_RESPONSE'"}]
 }'
 
 echo $BLIND_MESSAGES
