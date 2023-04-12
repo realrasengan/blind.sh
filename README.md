@@ -3,6 +3,12 @@
 This asks OpenAI to transcribe your voice, then asks ChatGPT to get a command from that and then uses AppleScript to try to do it.  My hope is that work in this direction will continue 
 to help support accessibility for those with different vision.
 
+## Video Example
+
+
+https://user-images.githubusercontent.com/466317/231329358-df73f2e2-cb35-4b56-8a96-523a0e027d8c.mp4
+
+
 ## WARNING
 
 This could severely damage your computer and is more or less just a 'show and tell' of what is possible. That said, simple work on boundaries could make this safe and production ready 
@@ -39,10 +45,7 @@ brew install sox lame jq
 
 6. Move to Applications Folder
 
-## Video Example
 
-
-https://user-images.githubusercontent.com/466317/231329358-df73f2e2-cb35-4b56-8a96-523a0e027d8c.mp4
 
 ## Note
 
